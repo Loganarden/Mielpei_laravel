@@ -11,6 +11,8 @@ Une market place de vente de miel dans le cadre d'une formation.
 
 -> php artisan ui bootstrap --auth  
 
+-> composer require "darryldecode/cart"
+
 -> npm install  
 
 -> npm run dev  
@@ -24,4 +26,6 @@ Une market place de vente de miel dans le cadre d'une formation.
 -> php artisan migrate
 
 -> php artisan db:seeders
+
+-> php artisan vendor:publish --provider="Darryldecode\Cart\CartServiceProvider" --tag="config"
 
