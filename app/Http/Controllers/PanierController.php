@@ -2,11 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
 use App\Models\Panier;
+use App\Models\Produit;
 use Illuminate\Http\Request;
 
 class PanierController extends Controller
 {
+
+    public function add(Request $request)
+    {
+        $produit = Produit::find($request->id);
+        Cart::add(array(
+            'id' => $produit->id, // inique row ID
+            'name' => $produit->name,
+            'image' => $produit->image,
+            'price' => $produit->prix,
+            'quantity' => $request->quantite,
+        ));
+
+        return redirect('/panier');
+    }
+
+    public function voir()
+    {
+        $content = Cart::getContent();
+        $total = Cart::getTotal();
+        //dd($content);
+        return view('panier', ['content' => $content, 'total' => $total,]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *

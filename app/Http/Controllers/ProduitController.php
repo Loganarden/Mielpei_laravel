@@ -77,8 +77,7 @@ class ProduitController extends Controller
      */
     public function edit(Produit $produit)
     {
-        $produit = Produit::find($id);
-        return view('',['produit' => $Produit,]);
+        return view('producteur.modification_produit',compact('produit'));
     }
 
     /**
@@ -90,17 +89,18 @@ class ProduitController extends Controller
      */
     public function update(Request $request, Produit $produit)
     {
-        $updateproduit = $request-> validate([
+        //$updateproduit = 
+        $request-> validate([
             'name' => ['required'],
             'description' => ['required'],
             'quantite' => ['required'],
             'prix' => ['required'],
-            'image' => ['required'],
         ]);
 
-        Produit::whereId($id)->update($updateproduit);
+        //Produit::whereId($id)->update($updateproduit);
+        $produit->update($request->all());
 
-        return redirect('/')->with('success','Produit modifer avec succés !');
+        return redirect('/producteur')->with('success','Produit modifer avec succés !');
     }
 
     /**
@@ -111,8 +111,9 @@ class ProduitController extends Controller
      */
     public function destroy(Produit $produit)
     {
-        \App\Models\Produit::destroy($id);
+        //\App\Models\Produit::destroy($id);
+        $produit->delete();
 
-        return redirect('/')->with('success','Produit suprimer !');
+        return redirect('/producteur')->with('success','Produit suprimer !');
     }
 }

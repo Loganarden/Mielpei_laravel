@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PanierController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProducteurController;
 
@@ -31,6 +32,13 @@ Route::get('/ajouterproduit',[ProduitController::class,'create']);
 Route::post('/ajouterproduit',[ProduitController::class,'store']);
 
 
+
+
+
+
+Route::post('/panier/add/{id]',[PanierController::class,'add'])->name('ajoutpanier');
+Route::get('/panier',[PanierController::class,'voir']);
+
 Auth::routes();
 
 Route::get('/admin',[AdminController::class,'index'])->name('admin')->middleware('admin');
@@ -42,6 +50,7 @@ Route::post('/inscription_admin',[AdminController::class,'store']);
 
 Route::get('/inscription_producteur',[ProducteurController::class,'create']);
 Route::post('/inscription_producteur',[ProducteurController::class,'store']);
+
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -26,7 +26,7 @@
                                 <p class=" card-text">{{ $produit->description }}</p>
                             </div>
                             <ul class=" list-group list-group-flush">
-                                <li class=" list-group-item text-sm-center" style="font-size: 20px"> {{ $produit->prix }} € <a href="{{ route('produits.show',$produit->name) }}" class=" col-md-4 btn btn-primary float-right">Acheter</a></li>
+                                <li class=" list-group-item text-sm-center" style="font-size: 20px"> {{ $produit->prix }} € <a href="{{ route('produits.show', $produit->id) }}" class=" col-md-4 btn btn-primary float-right">Acheter</a></li>
                             </ul>
                         </div>
                     @endforeach

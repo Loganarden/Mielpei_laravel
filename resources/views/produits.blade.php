@@ -22,12 +22,13 @@
     
                     <h1 class="pt-5 display-4">{{ $produit->name }}</h1>
                     <p class="pt-3 ">{{ $produit->description }}</p>
-                    <p class="prix display-4" > prix :{{ $produit->prix }} €</p>
-                    <form class="pt-3" method="POST" action="/">
+                    <p class="prix display-4" > prix :{{ $produit->prix }} € </p>
+                    <form class="pt-3" method="POST" action="{{ route('ajoutpanier', ['id' => $produit->id]) }}">
+                        @csrf
                         <input type="hidden" name="id" value="{{ $produit->id }}">
                         <label for="quantite">Quantite :</label>
                         <input type="number" name="quantite" value="1" min="1">
-                        <p class="pt-3"><button class="btn btn-primary" type="submit">Ajouter au panier</button></p>
+                        <p class="pt-3"><button  class="btn btn-primary" type="submit">Ajouter au panier</button></p>
                     </form>
     
                 </div>

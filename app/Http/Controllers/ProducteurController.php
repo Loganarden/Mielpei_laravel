@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\User;
+use App\Models\Produit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -10,7 +12,8 @@ class ProducteurController extends Controller
 {
     public function index()
     {
-        return view('producteur.producteur');
+        $produit = \App\Models\Produit::all();
+        return view('producteur.producteur',['produit' => $produit]);
     }
 
     public function create()
