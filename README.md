@@ -3,15 +3,7 @@
 Une market place de vente de miel dans le cadre d'une formation.
 ### instalation
 
--> composer install  
-
--> composer require laravel/ui  
-
--> php artisan ui bootstrap  
-
--> php artisan ui bootstrap --auth  
-
--> composer require "darryldecode/cart"
+-> composer install
 
 -> npm install  
 
