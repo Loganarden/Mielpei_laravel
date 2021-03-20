@@ -5,7 +5,7 @@ Une market place de vente de miel dans le cadre d'une formation.
 
 -> composer install  
 
--> composer required laravel/ui  
+-> composer require laravel/ui  
 
 -> php artisan ui bootstrap  
 
