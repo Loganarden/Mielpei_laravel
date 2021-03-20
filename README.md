@@ -7,6 +7,8 @@ Une market place de vente de miel dans le cadre d'une formation.
 
 -> npm install  
 
+Si le CSS ne s'afiche pas bien faire un :
+
 -> npm run dev  
 
 ### suite
