@@ -19,5 +19,6 @@ Une market place de vente de miel dans le cadre d'une formation.
 
 -> php artisan db:seeders
 
--> php artisan vendor:publish --provider="Darryldecode\Cart\CartServiceProvider" --tag="config"
+Aux cas ou si ça ne marche pas faire :
 
+-> php artisan key:generate
