@@ -5,6 +5,7 @@
 @endsection
 
 @section('contenu')
+
     <div class="container">
 
         @if (session('status'))
@@ -43,16 +44,82 @@
                         </tbody>
                     </table>
                 </div>
+            </div></br>
+
+            <div class="listu">
+                {{-- liste des utilisatuer inscrit --}}
+                <div class="container">
+                    <h2>Liste des client</h2>
+                    <table class="table col-md-8">
+                        <thead>
+                            <tr>
+                                <th class="table-active" scope="col">Nom</th>
+                                <th class="table-active" scope="col">Email</th>
+                                <th class="table-active" scope="col"></th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            @foreach ($user as $user )
+                            <tr scope="row">
+                                <td>
+                                    {{ $user->name }}
+                                </td>
+                                <td>
+                                    {{ $user->email }}
+                                </td>
+                                <td>
+                                    <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="list">
+                    {{-- liste des producteur  --}}
+                    <div class="container">
+                        <h2>Liste des producteur</h2>
+                        <table class="table col-md-8">
+                            <thead>
+                                <tr>
+                                    <th class="table-active" scope="col">Nom</th>
+                                    <th class="table-active" scope="col">Email</th>
+                                    <th class="table-active" scope="col"></th>
+                                </tr>
+                            </thead>
+                    
+                            <tbody>
+                                @foreach ($producteur as $producteur )
+                                <tr scope="row">
+                                    <td>
+                                        {{ $producteur->name }}
+                                    </td>
+                                    <td>
+                                        {{ $producteur->email }}
+                                    </td>
+                                    <td>
+                                        <form action="{{ route('users.destroy', $producteur->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
-    
-        </div>
         
-        <div class="list">
-            {{-- liste des producteur  --}}
         </div>
 
-        <div class="listu">
-            {{-- liste des utilisatuer inscrit --}}
-        </div>
     </div>    
 @endsection

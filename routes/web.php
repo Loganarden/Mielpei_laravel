@@ -26,18 +26,16 @@ use App\Http\Controllers\ProducteurController;
 
 Route::resource('produits',ProduitController::class);
 
+Route::resource('users',AdminController::class);
+
 Route::get('/',[ProduitController::class,'index']);
 Route::get('/produit/{id}',[ProduitController::class,'show'])->name('produits.show');
 Route::get('/ajouterproduit',[ProduitController::class,'create']);
 Route::post('/ajouterproduit',[ProduitController::class,'store']);
 
 
-
-
-
-
 Route::post('/panier/add/{id]',[PanierController::class,'add'])->name('ajoutpanier');
-Route::get('/panier',[PanierController::class,'voir']);
+Route::get('/panier',[PanierController::class,'voir'])->middleware('auth');
 
 Auth::routes();
 

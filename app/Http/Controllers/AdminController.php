@@ -11,8 +11,9 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $admin = \App\Models\User::all();
-        return view ('admin.admin',['admin' => $admin]);
+        $user = \App\Models\User::all()->where('roles', '3');
+        $producteur = \App\Models\User::all()->where('roles', '2');
+        return view ('admin.admin',['user' => $user, 'producteur' => $producteur]);
     }
 
     public function create()
@@ -44,16 +45,17 @@ class AdminController extends Controller
         return redirect('/admin')->with('success','Produit ajouté avec succés !');
     }
 
-    public function user()
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user)
     {
-        //
-    }
+        //\App\Models\Produit::destroy($id);
+        $user->delete();
 
-    public function producteur()
-    {
-        // $producteur = App\Models\User::all();
-        
-        // return view ('',['producteur' => $producteur]);
+        return redirect('/admin')->with('success','Produit suprimer !');
     }
-
 }

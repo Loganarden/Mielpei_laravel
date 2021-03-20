@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="/admin">Mon-compte</a>
                         </li>
                         <li class="nav-item">
@@ -45,7 +45,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/">lien</a>
-                        </li>
+                        </li> --}}
 
                     </ul>
 
