@@ -19,7 +19,7 @@ Si le CSS ne s'afiche pas corréctement faire un :
 
 -> php artisan migrate
 
--> php artisan db:seeders
+-> php artisan db:seed
 
 Aux cas ou si ça ne marche pas faire :
 
