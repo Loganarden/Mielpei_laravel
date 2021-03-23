@@ -20,8 +20,6 @@ class CreateProduitsTable extends Migration
             $table->double('prix');
             $table->integer('quantite');
             $table->string('image')->nullable();
-            $table->unsignedBigInteger('id_producteurs')->nullable();
-            $table->foreign('id_producteurs')->references('id')->on('producteurs');
             $table->timestamps();
             $table->softDeletes();
         });
