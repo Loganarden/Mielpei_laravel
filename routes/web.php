@@ -28,6 +28,10 @@ Route::resource('produits',ProduitController::class);
 
 Route::resource('users',AdminController::class);
 
+Route::resource('clients',UserController::class);
+
+Route::resource('producteur',ProducteurController::class);
+
 Route::get('/',[ProduitController::class,'index']);
 Route::get('/produit/{id}',[ProduitController::class,'show'])->name('produits.show');
 Route::get('/ajouterproduit',[ProduitController::class,'create']);

@@ -12,7 +12,7 @@ class ProducteurController extends Controller
 {
     public function index()
     {
-        $produit = \App\Models\Produit::all();
+        $produit = \App\Models\Produit::all()->where('user_id', Auth::user()->id);
         return view('producteur.producteur',['produit' => $produit]);
     }
 
@@ -50,4 +50,43 @@ class ProducteurController extends Controller
 
         return redirect('/admin')->with('success','Produit ajouté avec succés !');
     }
+
+        /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(User $user)
+    {
+        return view('producteur.producteur_modification',compact('user'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\User $user
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, User $user)
+    {
+        $updateuser = 
+        $request-> validate([
+            'name' => ['required'],
+            'email' => ['required'],
+            'description' => ['required'],
+            'ville' => ['required'],
+            'numero' => ['required'],
+            
+        ]);
+
+        Auth::user()->update($updateuser);
+        //$produit->update($request->all());
+
+        return redirect('/producteur')->with('success','Produit modifer avec succés !');
+    }
+
+
+
 }

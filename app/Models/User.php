@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Produit;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -46,4 +47,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function produit()
+    {
+        return $this->hasMany(Produit::class);
+    }
 }

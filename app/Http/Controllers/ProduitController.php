@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Produit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProduitController extends Controller
 {
@@ -51,6 +52,7 @@ class ProduitController extends Controller
             'quantite' => $request['quantite'],
             'prix' => $request['prix'],
             'image' => '\images\miel.png',
+            'user_id' => Auth::user()->id,
         ]);
 
         return redirect('/')->with('success','Produit ajouté avec succés !');

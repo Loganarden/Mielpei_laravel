@@ -12,6 +12,10 @@
         <h1 class="title">Bienvenue sur MiélPéi</h1>
     </div>
 
+    <div class="container producteur"></div>
+
+    </div>
+
     <div class=" container">
         <div class="row">
             <div class=" col-md-12">
@@ -34,7 +38,7 @@
             </div>
         </div>    
     </div>
-    
+
 </div>
 
 

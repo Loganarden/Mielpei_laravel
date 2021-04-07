@@ -45,6 +45,7 @@ class AdminController extends Controller
         return redirect('/admin')->with('success','Produit ajouté avec succés !');
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
@@ -56,6 +57,6 @@ class AdminController extends Controller
         //\App\Models\Produit::destroy($id);
         $user->delete();
 
-        return redirect('/admin')->with('success','Produit suprimer !');
+        return redirect('/admin')->with('success','Utilisateur suprimer !');
     }
 }

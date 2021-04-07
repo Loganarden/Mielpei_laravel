@@ -20,7 +20,9 @@
 
         <div class="container">
             <div class="fiche_client">
-                <h2>vos information</h2> </br>
+                <h2>vos information
+                    <a class="btn btn-info" href="{{ route('clients.edit', Auth::user()->id) }}">Modifier</a>    
+                </h2> </br>
                 
                 <table class="table col-md-8">
                     <tbody>

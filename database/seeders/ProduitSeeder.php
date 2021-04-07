@@ -21,7 +21,8 @@ class ProduitSeeder extends Seeder
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
                 'quantite' => 25,
                 'prix' => 10.50,
-                'image' => '\images\miel.png'
+                'image' => '\images\miel.png',
+                'user_id' => 2
             ],
 
             [
@@ -29,7 +30,8 @@ class ProduitSeeder extends Seeder
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
                 'quantite' => 15,
                 'prix' => 25,
-                'image' => '\images\miel.png'
+                'image' => '\images\miel.png',
+                'user_id' => 2
             ],
 
             [
@@ -37,7 +39,8 @@ class ProduitSeeder extends Seeder
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
                 'quantite' => 5,
                 'prix' => 50,
-                'image' => '\images\miel.png'
+                'image' => '\images\miel.png',
+                'user_id' => 2
             ],
 
             [
@@ -45,7 +48,8 @@ class ProduitSeeder extends Seeder
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
                 'quantite' => 50,
                 'prix' => 7,
-                'image' => '\images\miel.png'
+                'image' => '\images\miel.png',
+                'user_id' => 2
             ],
 
             [
@@ -53,7 +57,8 @@ class ProduitSeeder extends Seeder
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
                 'quantite' => 3,
                 'prix' => 30.50,
-                'image' => '\images\miel.png'
+                'image' => '\images\miel.png',
+                'user_id' => 2
             ],
         ];
 

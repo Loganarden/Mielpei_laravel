@@ -20,6 +20,8 @@ class CreateProduitsTable extends Migration
             $table->double('prix');
             $table->integer('quantite');
             $table->string('image')->nullable();
+            $table->integer('user_id')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });
