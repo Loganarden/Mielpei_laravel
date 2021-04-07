@@ -38,9 +38,39 @@ class UserSeeder extends Seeder
 
             [
                 'id' => "3",
+                'name' => "jhon",
+                'email' => "jhon@jhon.fr",
+                'ville' => "Saint Paul",
+                'description' => "je suis un autre producteur!",
+                'numero' => "0692654321",
+                'password' => Hash::make("jhon"),
+                'roles' => "2",
+            ],
+
+            [
+                'id' => "6",
+                'name' => "jean",
+                'email' => "jean@jean.fr",
+                'ville' => "Saint Philipe",
+                'description' => "je suis encore un autre producteur!",
+                'numero' => "0692654321",
+                'password' => Hash::make("jean"),
+                'roles' => "2",
+            ],
+
+            [
+                'id' => "4",
                 'name' => "client",
                 'email' => "client@client.fr",
                 'password' => Hash::make("client"),
+                'roles' => "3",
+            ],
+
+            [
+                'id' => "5",
+                'name' => "fleure",
+                'email' => "fleure@fleure.fr",
+                'password' => Hash::make("fleure"),
                 'roles' => "3",
             ],
         ];

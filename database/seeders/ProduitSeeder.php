@@ -60,6 +60,24 @@ class ProduitSeeder extends Seeder
                 'image' => '\images\miel.png',
                 'user_id' => 2
             ],
+
+            [
+                'name' => "miel de cardamon",
+                'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
+                'quantite' => 3,
+                'prix' => 20.99,
+                'image' => '\images\miel.png',
+                'user_id' => 3
+            ],
+
+            [
+                'name' => "miel de baie rose",
+                'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus.",
+                'quantite' => 3,
+                'prix' => 60.50,
+                'image' => '\images\miel.png',
+                'user_id' => 3
+            ],
         ];
 
         DB::table('produits')->insert($produits);

@@ -15,6 +15,7 @@ class CreatePaniersTable extends Migration
     {
         Schema::create('paniers', function (Blueprint $table) {
             $table->id();
+            $table->longText('data_panier');
             $table->timestamps();
             $table->softDeletes();
         });
